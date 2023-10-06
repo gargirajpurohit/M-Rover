@@ -1,15 +1,22 @@
 Input:
 
 10 10
-0 0 N  input value 1 
+
+0 0 N // input value 1 
+
 MMRMLM
+
 3 3 E
-MMRMMRMRRM input value 2
+
+MMRMMRMRRM // input value 2
+
 O 2 2 // obstacle at 2,2 
+
 
 Output:
 
 1 3 N
+
 5 1 E
 
 To run the code:
