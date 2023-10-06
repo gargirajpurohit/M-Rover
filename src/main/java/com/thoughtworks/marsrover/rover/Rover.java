@@ -68,11 +68,32 @@ public class Rover {
     public void moveForward() {
         getDirection().moveForward(this);
         validateLocation();
+
+        int newX = coordinateX;
+        int newY = coordinateY;
+        direction.moveForward(this);
+
+        if (!plateau.hasObstacleAt(newX, newY)) {
+            setCoordinateX(newX);
+            setCoordinateY(newY);
+        } else {
+            System.out.println("Obstacle detected. Rover cannot move.");
+        }
     }
 
     public void moveBack() {
         getDirection().moveBack(this);
         validateLocation();
+        int newX = coordinateX;
+        int newY = coordinateY;
+        direction.moveBack(this);
+
+        if (!plateau.hasObstacleAt(newX, newY)) {
+            setCoordinateX(newX);
+            setCoordinateY(newY);
+        } else {
+            System.out.println("Obstacle detected. Rover cannot move.");
+        }
     }
 
     public String broadcastLocation() {

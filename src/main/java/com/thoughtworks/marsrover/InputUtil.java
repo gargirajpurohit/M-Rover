@@ -52,4 +52,33 @@ class InputUtil {
 
         return commandArrayList;
     }
+//------------------------
+    //  public static Obstacle parseObtacleInpuObstacle(String ObstacleInput) {
+    //     String[] inputArray = ObstacleInput.split(" ");
+    //     int x = Integer.parseInt(inputArray[0]);
+    //     int y = Integer.parseInt(inputArray[1]);
+    //     return new Obstacle(x, y);
+    // }
+   
+    // public static Obstacle parseObstacleInput(String obstacleInput) {
+    //     String[] inputArray = obstacleInput.split(" ");
+    //     int x = Integer.parseInt(inputArray[0]);
+    //     int y = Integer.parseInt(inputArray[1]);
+    //     return new Obstacle(x, y);
+    // }
+    public static Obstacle parseObstacleInput(String obstacleInput, Plateau plateau) {
+        String[] inputArray = obstacleInput.split(" ");
+        int x = Integer.parseInt(inputArray[1]);
+        int y = Integer.parseInt(inputArray[2]);
+        Obstacle obstacle = new Obstacle(x, y);
+        plateau.addObstacle(obstacle);
+        return obstacle;
+    }
+    public static Obstacle parseObstacleInput(String obstacleInput) {
+        String[] inputArray = obstacleInput.split(" ");
+        int x = Integer.parseInt(inputArray[0]);
+        int y = Integer.parseInt(inputArray[1]);
+        return new Obstacle(x, y);
+    }
+    
 }
